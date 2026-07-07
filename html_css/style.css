@@ -100,3 +100,17 @@ footer {
         flex-direction: column;
     }
 }
+
+.botao {
+    background-color: var(--cor-secundaria);
+    color: white;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

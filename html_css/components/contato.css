@@ -1,0 +1,14 @@
+.contato-content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    img{
+        transform: scale(0.4);
+    }
+
+    @media (max-width:480px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}

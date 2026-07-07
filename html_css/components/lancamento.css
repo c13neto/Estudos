@@ -10,20 +10,6 @@
         width: 99%;
         aspect-ratio: 2 / 1;
     }
-
-    button {
-        background-color: var(--cor-secundaria);
-        color:white;
-        width: 150px;
-        height: 50px;
-        border: none;
-        border-radius: 12px;
-
-        &:hover{
-            text-decoration: underline;
-            cursor: pointer;
-        }
-    }
 }
 
 .catalogo {
