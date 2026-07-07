@@ -1,0 +1,14 @@
+.catologo{
+    iframe{
+        width: 100%;
+    }
+    figure{
+        .product{}
+        input{}
+        figcaption{
+            p{}
+        }
+    }
+    .info{}
+    button{}
+}
