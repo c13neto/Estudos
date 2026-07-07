@@ -1,14 +1,91 @@
-.catologo{
-    iframe{
-        width: 100%;
+.conteudo-lancamento {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+
+    iframe {
+        width: 99%;
+        aspect-ratio: 2 / 1;
     }
-    figure{
-        .product{}
-        input{}
-        figcaption{
-            p{}
+
+    button {
+        background-color: var(--cor-secundaria);
+        color:white;
+        width: 150px;
+        height: 50px;
+        border: none;
+        border-radius: 12px;
+
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
         }
     }
-    .info{}
-    button{}
+}
+
+.catalogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--gap-primaria);
+    margin-bottom: var(--gap-primaria);
+    margin-bottom: var(--gap-primaria) ;
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: var(--gap-secundaria);
+        gap: var(--gap-secundaria);
+
+        .product {
+            max-width: 100%;
+            height: auto;
+        }
+        .titulo{
+            color: var(--cor-secundaria);
+        }
+
+        .carro {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: var(--gap-secundaria);
+
+            figcaption {
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    font-family: var(--fonte-primaria);
+                    font-size: var(--fonte-tamanho);
+                }
+            }
+            input{
+                transform: scale(2);
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            .info {
+                width: 20px;
+                height: 20px;
+            }
+
+            @media (max-width: 480px) {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }

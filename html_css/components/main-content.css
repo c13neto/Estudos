@@ -1,21 +1,22 @@
 main {
     display: flex;
     justify-content: center;
+
     figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
 
-    img {
-        width: 100%;
-    }
+        img {
+            width: 100%;
+        }
 
-    figcaption {
-        font-family: var(--fonte-primaria);
-        font-size: var(--fonte-tamanho);
-        margin-bottom: var(--gap-secundaria);
+        figcaption {
+            font-family: var(--fonte-primaria);
+            font-size: var(--fonte-tamanho);
+            margin-bottom: var(--gap-secundaria);
+        }
     }
-}
 }
