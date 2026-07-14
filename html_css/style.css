@@ -4,22 +4,20 @@
 @import url("./components/main-content.css");
 
 :root {
-    --gap-primaria: 16px;
-    --gap-secundaria: 8px;
+    --gap-primaria: 1rem;
+    --gap-secundaria: 0.5rem;
     --cor-primaria: #1b357e;
     --cor-secundaria: #1351d8;
     --fonte-primaria: "Roboto", sans-serif;
-    --fonte-tamanho: 16px;
+    --fonte-tamanho: 1rem;
 }
 
 body {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 100px auto 100px;
-
-    @media (max-width: 480px) {
-        grid-template-rows: 100px auto 100px;
-    }
+    grid-template-rows: auto 1fr auto;
+    font-family: var(--fonte-primaria);
+    font-size: var(--fonte-tamanho);
 }
 
 main {
@@ -31,35 +29,37 @@ header {
     flex-direction: row;
     align-items: center;
     box-shadow: 0 2px 9px rgba(0, 0, 0, 0.4);
+}
 
-    a img {
-        width: 100px;
-    }
+header a img {
+    width: 100px;
+}
 
-    nav {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        gap: var(--gap-primaria);
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-primaria);
+}
 
-        a {
-            text-decoration: none;
-            color: var(--cor-secundaria);
-            outline: none;
-            font-family: var(--fonte-primaria);
-            font-size: var(--fonte-tamanho);
-        }
+header nav a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    outline: none;
+    font-family: var(--fonte-primaria);
+    font-size: var(--fonte-tamanho);
+}
 
-        @media (max-width: 480px) {
-            gap: var(--gap-secundaria);
-        }
-    }
-
-    @media (max-width: 480px) {
+@media (max-width: 480px) {
+    header {
         flex-direction: column;
         justify-content: center;
         gap: var(--gap-primaria);
-        margin-top: var(--gap-secundaria);
+        padding-bottom: var(--gap-secundaria);
+    }
+
+    header nav {
+        gap: var(--gap-secundaria);
     }
 }
 
@@ -68,37 +68,42 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: white;
+}
 
-    address {
-        display: flex;
-        align-items: center;
-        margin: var(--gap-secundaria);
+footer address {
+    display: flex;
+    align-items: center;
+    margin: var(--gap-secundaria);
+}
 
-        p {
-            color: white;
-            font-family: var(--fonte-primaria);
-        }
+footer > img {
+    margin-right: var(--gap-secundaria);
+}
 
-        @media (max-width: 480px) {
-            flex-direction: row;
-
-            a img {
-                width: 40px;
-            }
-        }
-    }
-
-    img {
-        margin-right: var(--gap-secundaria);
-
-        @media (max-width:480px) {
-            width: 80px;
-        }
-    }
-
-    @media (max-width: 480px) {
+@media (max-width: 480px) {
+    footer {
         flex-direction: column;
     }
+
+    footer address {
+        flex-direction: row;
+    }
+
+    footer address a img {
+        width: 40px;
+    }
+
+    footer > img {
+        width: 80px;
+    }
+    .copyright {
+        margin-bottom: var(--gap-secundaria);
+    }
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
 }
 
 .botao {
@@ -107,10 +112,12 @@ footer {
     width: 150px;
     height: 50px;
     border: none;
-    border-radius: 12px;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
 
-    &:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
+.botao:hover {
+    cursor: pointer;
+    transform: scale(1.05); 
+    background-color: #0d389c; 
 }

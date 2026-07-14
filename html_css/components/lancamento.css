@@ -4,12 +4,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
+}
 
-    iframe {
-        width: 100%;
-        aspect-ratio: 16 / 9;
-    }
+.conteudo-lancamento iframe {
+    width: 95%;
+    max-width: 1400px;
+    aspect-ratio: 21 / 9;
+    background-color: black;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .catalogo {
@@ -18,60 +21,58 @@
     justify-content: center;
     gap: var(--gap-primaria);
     margin-bottom: var(--gap-primaria);
-    margin-bottom: var(--gap-primaria) ;
+}
 
-    figure {
-        display: flex;
+.catalogo figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--gap-secundaria);
+    gap: var(--gap-secundaria);
+}
+
+.catalogo figure .product {
+    max-width: 100%;
+    height: auto;
+}
+
+.catalogo figure .titulo {
+    color: var(--cor-secundaria);
+}
+
+.catalogo figure .carro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-secundaria);
+}
+
+.catalogo figure .carro figcaption {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalogo figure .carro input {
+    transform: scale(2);
+}
+
+.catalogo figure .carro input:hover {
+    cursor: pointer;
+}
+
+.catalogo figure .carro .info {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+@media (max-width: 480px) {
+    .catalogo {
         flex-direction: column;
         align-items: center;
-        margin-top: var(--gap-secundaria);
-        gap: var(--gap-secundaria);
-
-        .product {
-            max-width: 100%;
-            height: auto;
-        }
-        .titulo{
-            color: var(--cor-secundaria);
-        }
-
-        .carro {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: var(--gap-secundaria);
-
-            figcaption {
-                display: flex;
-                flex-direction: column;
-
-                p {
-                    font-family: var(--fonte-primaria);
-                    font-size: var(--fonte-tamanho);
-                }
-            }
-            input{
-                transform: scale(2);
-
-                &:hover{
-                    cursor: pointer;
-                }
-            }
-
-            .info {
-                width: 20px;
-                height: 20px;
-            }
-
-            @media (max-width: 480px) {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
     }
 
-    @media (max-width: 480px) {
+    .catalogo figure .carro {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
     }
 }

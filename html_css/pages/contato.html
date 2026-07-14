@@ -8,6 +8,9 @@
     <meta name="description" content="Site teste avaliativo da Ford">
     <meta name="keywords" content="ford, html, css">
     <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Ford - Contato</title>
 </head>
 
@@ -30,18 +33,19 @@
                 <input type="text" placeholder="NOME*" required>
                 <input type="text" placeholder="SOBRENOME*" required>
                 <input type="email" placeholder="E-MAIL*" required>
-                
+
                 <input type="tel" placeholder="TELEFONE*" required>
-                
-                <input type="text" placeholder="CPF*" required>
 
                 <select required>
-                    <option value="" selected disabled hidden>COMO DESEJA SER CONTATADO</option>
-                    <option>Telefone</option>
-                    <option>E-mail</option>
-                    <option>WhatsApp</option>
+                    <option value="" selected disabled hidden>TIPO DE CONTATO*</option>
+                    <option>Elogio</option>
+                    <option>Reclamação</option>
+                    <option>Solicitação</option>
                 </select>
-                <button class="botao">Enviar</button>
+
+                <textarea placeholder="MENSAGEM*" rows="5" required></textarea>
+
+                <button class="botao" type="submit">Enviar</button>
             </form>
         </div>
     </main>
@@ -49,10 +53,14 @@
     <footer>
         <address>
             <p>Redes Sociais</p>
-            <a href="https://www.facebook.com/FordBrasil/?locale=pt_BR"><img src="../public/facebook-50.png" alt="Facebook logo"></a>
-            <a href="https://www.youtube.com/fordbrasil"><img src="../public/youtube-squared-50.png" alt="Youtube logo"></a>
-            <a href="https://www.instagram.com/fordbrasil/"><img src="../public/instagram-logo-50.png" alt="Instagram logo"></a>
+            <a href="https://www.facebook.com/FordBrasil/?locale=pt_BR"><img src="../public/facebook-50.png"
+                    alt="Facebook logo"></a>
+            <a href="https://www.youtube.com/fordbrasil"><img src="../public/youtube-squared-50.png"
+                    alt="Youtube logo"></a>
+            <a href="https://www.instagram.com/fordbrasil/"><img src="../public/instagram-logo-50.png"
+                    alt="Instagram logo"></a>
         </address>
+        <p class="copyright">&copy; 2022 Ford. Todos os direitos reservados.</p>
         <img src="../public/ford-96.png" alt="Ford logo antiga">
     </footer>
 
