@@ -34,13 +34,21 @@
         </div>
         <div id="carousel-title">
         </div>
+        <div id="carousel-link">
+            <button onclick="Carousel.previous_next(-1)">&lt;</button>
+            <input type="radio" name="carousel" id="carousel-radio-1" onclick="Carousel.GoTo(0)">
+            <input type="radio" name="carousel" id="carousel-radio-2" onclick="Carousel.GoTo(1)">
+            <input type="radio" name="carousel" id="carousel-radio-3" onclick="Carousel.GoTo(2)">
+            <button onclick="Carousel.previous_next()">&gt;</button>
+        </div>
         <script>
              //insert each image on carousel
-            carouselArr.push(new Carousel("imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","lancamento.html"));
-            carouselArr.push(new Carousel("imagem_2.jpg","Ford a nossa história","#"));
-            carouselArr.push(new Carousel("imagem_3.jpg","Nova Ford Bronco Sport 2022","lancamento.html"));
+            carouselArr.push(new Carousel("./img/imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","lancamento.html"));
+            carouselArr.push(new Carousel("./img/imagem_2.jpg","Ford a nossa história","#"));
+            carouselArr.push(new Carousel("./img/imagem_3.jpg","Nova Ford Bronco Sport 2022","lancamento.html"));
             Carousel.Start(carouselArr);
         </script>
+
     </main>
     <footer>
         <nav id="social">

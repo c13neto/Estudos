@@ -52,3 +52,12 @@ button {
 .titulo {
     margin-left: 8px;
 }
+button[type="submit"] {
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #1b357e;
+    transform: scale(1.05); /* Aumenta levemente o botão */
+    cursor: pointer;
+}
